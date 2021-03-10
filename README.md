@@ -3,8 +3,7 @@
 ## Installing App
 
 Clone the repo to your local machine  
-Run `yarn install`  
-Use the available scripts below for starting the development server, testing the app and building a prodcution version
+Run `yarn install` to install dependencies   
 
 
 ## Available Scripts
