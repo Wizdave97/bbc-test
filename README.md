@@ -27,4 +27,3 @@ Launches the test runner in the interactive watch mode.\
 
 Builds the app for production to the `dist` folder.\
 
-

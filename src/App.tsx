@@ -23,7 +23,7 @@ function App() {
     const keys = Object.keys(dataToUse)
     const paras = []
     for (let key of keys) {
-      if (key.startsWith('p_')) {
+      if (key.indexOf('p_') > -1) {
         paras.push(dataToUse[key as keyof typeof dataToUse])
       }
     }
