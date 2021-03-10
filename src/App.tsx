@@ -111,7 +111,7 @@ function App() {
                 {
                   (selectedCity !== null) && (
                     <>
-                      <h4 className='w-full mb-4  text-xl text-gray-700'>Living in {citiesData[selectedCity]?.name}?</h4>
+                      <h4 className='w-full mb-4  text-xl text-gray-700'>{lang === LANGUAGE.ENGLISH ? 'Living in': 'में रहने वाले'} {citiesData[selectedCity]?.name}?</h4>
                       <div className='flex flex-row items-center'>
                         <div className='w-16 h-16 mr-6 overflow-hidden'>
                           <img className='w-full h-full' src={CiggIcon} alt='ciggrette icon' />
