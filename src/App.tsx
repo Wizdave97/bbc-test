@@ -70,14 +70,14 @@ function App() {
       </div>
       <div className='w-full my-6 flex flex-row justify-end p-8 sm:px-10 md:px-24 lg:px-32 xl:px-56'>
         <h3 className='text-md font-bold text-gray-700 mr-4'>Select language</h3>
-        <Dropdown 
-        data-testid='lang-dropdown'
-        value={lang}
-        options={[
-          {value: LANGUAGE.ENGLISH, text: 'English', key: LANGUAGE.ENGLISH}, 
-          {value: LANGUAGE.HINDI, text: 'Hindi', key: LANGUAGE.HINDI}]}
+        <Dropdown
+          data-testid='lang-dropdown'
+          value={lang}
+          options={[
+            { value: LANGUAGE.ENGLISH, text: 'English', key: LANGUAGE.ENGLISH },
+            { value: LANGUAGE.HINDI, text: 'Hindi', key: LANGUAGE.HINDI }]}
           onChange={(_, { value }) => setLang(value as LANGUAGE)}
-          />
+        />
       </div>
       <div className='w-full flex flex-col p-8 sm:px-10 md:px-24 lg:px-32 sm:py-10 md:py-16 lg:py-20 xl:px-56 xl:py-24'>
         <div className='w-full flex flex-row items-center justify-between my-8'>
@@ -111,12 +111,12 @@ function App() {
                 {
                   (selectedCity !== null) && (
                     <>
-                      <h4 className='w-full mb-4  text-xl text-gray-700'>{lang === LANGUAGE.ENGLISH ? 'Living in': 'में रहने वाले'} {citiesData[selectedCity]?.name}?</h4>
+                      <h4 className='w-full mb-4  text-xl text-gray-700'>{lang === LANGUAGE.ENGLISH ? 'Living in' : 'में रहने वाले'} {citiesData[selectedCity]?.name}?</h4>
                       <div className='flex flex-row items-center'>
                         <div className='w-16 h-16 mr-6 overflow-hidden'>
                           <img className='w-full h-full' src={CiggIcon} alt='ciggrette icon' />
                         </div>
-                        <span className='text-xl text-gray-700'>{lang === LANGUAGE.ENGLISH ? `You smoke ${citiesData?.[selectedCity]?.cigg} ciggrettes daily`: `आप रोजाना ${citiesData?.[selectedCity]?.cigg} सिगरेट पीते हैं`}</span>
+                        <span className='text-xl text-gray-700'>{lang === LANGUAGE.ENGLISH ? `You smoke ${citiesData?.[selectedCity]?.cigg} ciggrettes daily` : `आप रोजाना ${citiesData?.[selectedCity]?.cigg} सिगरेट पीते हैं`}</span>
                       </div>
                       <div className='flex flex-row items-center my-3'>
                         <span className='text-2xl text-gray-700'>{lang === LANGUAGE.ENGLISH ? `Your air quality is ` : `आपकी हवा की गुणवत्ता है `} {citiesData?.[selectedCity]?.aqi} ({pmToMilliGrams(citiesData?.[selectedCity]?.aqi)} µg/m3)</span>
